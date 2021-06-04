@@ -17,7 +17,6 @@ function CompletedTodo() {
             <div className="w-11/12 ml-7 mt-5 pb-2 bg-gray-300 rounded-lg">
               <div className="flex pt-1 items-center">
                 <p className="pl-2 font-bold text-lg pr-3">{item.title}</p>
-                <p className="text-sm text-gray-600">{item.due}</p>
               </div>
               <p className="pl-2">{item.message}</p>
             </div>

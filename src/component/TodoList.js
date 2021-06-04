@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import { useSelector, useDispatch } from "react-redux";
 import { todoActions, selectTodo } from "../features/todoSlice";
 import { XCircleIcon } from "@heroicons/react/solid";
+import Countdown from "./Countdown";
 
 function TodoList() {
   const dispatch = useDispatch();
@@ -23,7 +24,10 @@ function TodoList() {
               <div className="flex pt-1 items-center justify-between">
                 <div className="flex pt-1 items-center">
                   <p className="pl-2 font-bold text-lg pr-3">{todo.title}</p>
-                  <p className="text-sm text-gray-600">{todo.due}</p>
+                  <Countdown
+                    className="text-sm text-gray-600"
+                    dueDate={new Date(todo.due)}
+                  />
                 </div>
                 <div>
                   <XCircleIcon

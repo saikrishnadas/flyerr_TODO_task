@@ -7,6 +7,7 @@ function UserForm() {
   const [title, setTitle] = useState();
   const [message, setMessage] = useState();
   const [due, setDue] = useState();
+  console.log(typeof due);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,6 +23,7 @@ function UserForm() {
     setMessage("");
     setDue("");
   };
+
   // id: Math.ceil(Math.random() * 100),
   return (
     <div className="flex m-5 h-screen justify-center mt-10">
