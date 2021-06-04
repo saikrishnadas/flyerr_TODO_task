@@ -12,9 +12,12 @@ export default function Countdown(props) {
   console.log(dueDate);
   return (
     <div className="flex">
-      <p>{timeSpan.hours}h</p>
-      <p>{timeSpan.minutes}m</p>
-      <p>{timeSpan.seconds}s</p>
+      {timeSpan.years > 0 && <p className="mr-1">{timeSpan.years}d</p>}
+      {timeSpan.months > 0 && <p className="mr-1">{timeSpan.months}d</p>}
+      {timeSpan.days > 0 && <p className="mr-1">{timeSpan.days}d</p>}
+      <p className="mr-1">{timeSpan.hours}h</p>
+      <p className="mr-1">{timeSpan.minutes}m</p>
+      <p className="mr-1">{timeSpan.seconds}s</p>
     </div>
   );
 }
